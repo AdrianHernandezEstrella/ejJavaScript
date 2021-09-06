@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Windows alert ()Method in HTML</title>
+    <style>
+
+      h1 {
+        color: #350f41;
+      }
+      h2 {
+        font-family: Impact;
+      }
+
+      body {
+        text-align: center;
+      }
+    </style>
+<!--alerta-->
+    <script language="JavaScript">
+      alert("Hola Mundo:)");
+    </script>
+  </head>
+
+  <body bgcolor="#8DC3FC">
+    <!--funciones de JavaScript-->
+    <h1 id="header">JavaScript</h1>
+    <script>
+      document.body.appendChild(
+        document.createTextNode("JavaScript habilitado")
+      );
+
+      var h1 = document.getElementById("header");
+      h1 = document.getElementsByTagName("h1")[0];
+    </script>
+    <noscript
+      >JavasScript Deshabilitado</noscript>
+      <!--Mensaje de Bienvenida-->
+    <h2>Bienvenidos</h2>
+    <h3>Hernandez Estrella Adrian</h3>
+
+    <!--doble click-->
+    <p>
+       Doble click
+      <br />
+      <button ondblclick="myalert()">
+
+        Puchale play
+
+      </button>
+      <script>
+        function myalert() {
+          alert("Test\n" + "Este es el mensaje de alerta " + "despues de haberle puchado");
+        }
+      </script>
+      <!--Validaciones-->
+    </p>
+
+    <h4>Validación input tipo numerico</h4>
+    <script>
+
+      function validarSiNumero(numero) {
+        if (!/^([0-9])*$/.test(numero))
+
+          alert("El valor " + numero + " no es un número");
+      }
+    </script>
+
+    <input
+
+      name="numero"
+      value=""
+      class="data"
+      type="text"
+      id="numero"
+      required
+      onKeyUp="javascript:validarSiNumero(this.value)"
+    />
+
+    <!--correo electrónico-->
+    <script type="text/javascript">
+      /*
+       * Función para validar una dirección de correo
+       * Tiene que recibir el identificador del formulario
+       */
+      function validateMail(idMail) {
+        
+        object = document.getElementById(idMail);
+        valueForm = object.value;
+
+        var patron = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,4})+$/;
+
+        if (valueForm.search(patron) == 0) {
+          //correcto
+          object.style.color = "#000";
+
+          return;
+        }
+        //incorrecto
+        object.style.color = "#f00";
+      }
+      //-->
+    </script>
+    <hr />
+    <!--Validar un correo electrónico-->
+    <h4>Validar correo electrónico</h4>
+    <div class="correo">
+      <input
+        name="email"
+        type="text"
+        class="data"
+        id="email"
+        value=""
+        
+        required
+        onKeyUp="javascript:validateMail('email')"
+      />
+
+      <!--Validar que un input sea de tipo fecha-->
+
+      <h4>Validación Fecha</h4>
+      <input type="date">
+    <br />
+
+    <!--Encender y apagar un foco y cambio de imagen-->
+    <h4>Prender y apagar foco</h4>
+
+    <button
+      onclick="document.getElementById('myImage').src='images/foco off.png'"
+    >
+      Apagado
+    </button>
+    <img id="myImage" src="images/foco off.png" style="width: 100px;" />
+    <button
+      onclick="document.getElementById('myImage').src='images/foco on.png'"
+    >
+      Encendido
+    </button>
+
+    <h3>Imagen</h3>
+    <button onclick="document.getElementById('Image').src='images/hombre.jpg'">
+      Hombre
+    </button>
+    <button onclick="document.getElementById('Image').src='images/mujer.jpg'">
+      mujer
+    </button>
+    <br />
+    <img id="Image" src="images/hombre.jpg" style="width: 300px;" />
+  </body>
+</html>
+
+
+    
